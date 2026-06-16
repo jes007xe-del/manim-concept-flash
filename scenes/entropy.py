@@ -13,14 +13,14 @@ class EntropyFlash(Scene):
         self.camera.background_color = "#0f0f23"
         captions = CaptionOverlay(self)
         
-        # === SEGMENT 1: HOOK (0-3s) ===
+        #  SEGMENT 1
         hook = HookLibrary.counterintuitive_question(
             self,
             "Why does your room\nalways get messy?",
             color="#e94560"
         )
         
-        # === SEGMENT 2: VISUAL METAPHOR (3-12s) ===
+        #  SEGMENT 2
         self.play(FadeOut(hook), run_time=0.5)
         
         # Ordered grid (clean room)
@@ -59,7 +59,7 @@ class EntropyFlash(Scene):
         )
         self.wait(0.5)
         
-        # === SEGMENT 3: CORE CONCEPT (12-22s) ===
+        # SEGMENT 3
         FlashTransitions.quick_fade(self, VGroup(ordered, label_clean), VGroup())
         
         formula = MathTex(
@@ -80,7 +80,7 @@ class EntropyFlash(Scene):
         self.play(FadeIn(concept_text), run_time=0.8)
         self.wait(2.0)
         
-        # === SEGMENT 4: PUNCHLINE (22-28s) ===
+        # SEGMENT 4
         arrow = Arrow(LEFT*2, RIGHT*2, color="#e94560", buff=0.3, stroke_width=6)
         arrow.next_to(concept_text, DOWN, buff=0.8)
         
@@ -96,7 +96,7 @@ class EntropyFlash(Scene):
         self.play(FadeIn(punchline), run_time=0.8)
         self.wait(1.5)
         
-        # === OUTRO (28-30s) ===
+        # out
         brand = Text("@ConceptFlash", font_size=20, color="#666666")
         brand.to_edge(DOWN, buff=0.3)
         self.play(FadeIn(brand), run_time=0.8)
