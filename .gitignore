@@ -1,0 +1,31 @@
+# Manim outputs
+media/
+__pycache__/
+*.pyc
+*.egg-info/
+.manim-renderer/
+
+# Video artifacts
+*.mp4
+*.mov
+*.avi
+*.webm
+
+# Temp files
+*.log
+*.aux
+*.dvi
+*.ps
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
